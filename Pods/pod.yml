@@ -1,0 +1,13 @@
+# Simple Kubernetes Pod to deploy the app contained in junrillg/express-app:latest
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-pod
+  labels:
+    app: web
+spec:
+  containers:
+    - name: web-ctr
+      image: junrillg/express-app:latest
+      ports:
+        - containerPort: 8080
